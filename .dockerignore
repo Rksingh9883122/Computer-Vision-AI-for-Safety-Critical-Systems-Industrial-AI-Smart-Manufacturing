@@ -1,0 +1,15 @@
+.git
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+uploads/*
+output/*
+logs/*
+*.mp4
+*.jpg
+*.png
+.vscode/
+.idea/

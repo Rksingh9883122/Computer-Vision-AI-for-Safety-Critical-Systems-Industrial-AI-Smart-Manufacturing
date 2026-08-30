@@ -1,0 +1,41 @@
+
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    env_file:
+      - .env
+    restart: unless-stopped
+    expose:
+      - "8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./output:/app/output
+      - ./logs:/app/logs
+      - ./static:/app/static:ro
+      - ./templates:/app/templates:ro
+      - ./runs:/app/runs            # if your YOLO weights live under runs/
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz').read()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  nginx:
+    image: nginx:1.25-alpine
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      # - "443:443"  # enable if using TLS config
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      # - ./docker/nginx/nginx-ssl.conf:/etc/nginx/nginx.conf:ro   # swap to enable TLS
+      - ./static:/app/static:ro
+      - ./uploads:/app/uploads:ro
+      # - /etc/letsencrypt:/etc/letsencrypt:ro   # mount your certs if using TLS
+    restart: unless-stopped

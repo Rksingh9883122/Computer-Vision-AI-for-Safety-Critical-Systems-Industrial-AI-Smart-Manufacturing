@@ -1,0 +1,57 @@
+[{
+    "stream_id": "East Side- NHT",
+    "source": "url",
+    "input_uri": "rtsp://admin:admin%40123@10.161.58.202:554/Streaming/Channels/101",
+    "camera_id": "NHT",
+    "location": "East Side- NHT",
+    "save_background": true
+  },
+  {
+    "stream_id": "East side of heater at site portacabin",
+    "source": "url",
+    "input_uri": "rtsp://admin:admin%40123@10.161.57.107:554/Streaming/Channels/101",
+    "camera_id": "portacabin",
+    "location": "portacabin",
+    "save_background": true
+  },
+  {
+    "stream_id": "gate_cam",
+    "source": "url",
+    "input_uri": "rtsp://admin:admin%40123@10.161.64.104:554/Streaming/Channels/101",
+    "camera_id": "GATE-01",
+    "location": "North Gate",
+    "save_background": true
+  },
+  {
+    "stream_id": "yard_cam",
+    "source": "url",
+    "input_uri": "rtsp://admin:admin%40123@10.161.64.105:554/Streaming/Channels/101",
+    "camera_id": "YARD-02",
+    "location": "Material Yard",
+    "save_background": true
+  },
+  {
+    "stream_id": "Near TS-02",
+    "source": "url",
+    "input_uri": "rtsp://admin:admin%40123@10.161.57.107:554/live.sdp",
+    "camera_id": "TANK-03",
+    "location": "Tank Farm",
+    "save_background": true
+  },
+  {
+    "stream_id": "usb_cam_0",
+    "source": "webcam",
+    "input_uri": 0,
+    "camera_id": "USB-00",
+    "location": "Control Room",
+    "save_background": true
+  },
+  {
+    "stream_id": "usb_cam_1",
+    "source": "webcam",
+    "input_uri": 1,
+    "camera_id": "USB-01",
+    "location": "Workshop",
+    "save_background": true
+  }
+]

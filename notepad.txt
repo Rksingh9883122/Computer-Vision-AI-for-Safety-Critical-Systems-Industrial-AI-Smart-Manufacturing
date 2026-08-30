@@ -1,0 +1,10 @@
+setx STREAMS_BOOT_JSON "C:\Users\rsingh6\OneDrive - TEN\Documents\Github\Safety Observation detection\streams_boot.json"
+
+cbkw xsus zyht ryso
+
+
+
+$env:SMTP_HOST = "smtp.gmail.com"
+$env:SMTP_PORT = "587"
+$env:SMTP_USER = "rksingh9883122@gmail.com"
+$env:SMTP_PASS = cbkw xsus zyht ryso

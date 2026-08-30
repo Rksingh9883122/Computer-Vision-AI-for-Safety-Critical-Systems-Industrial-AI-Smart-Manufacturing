@@ -1,0 +1,7 @@
+{// "stream_id": "mjpeg_cam",
+    // "source": "url",
+    // "input_uri": "http://10.0.0.20/mjpeg",
+    // "camera_id": "MJPEG-01",
+    // "location": "Parking",
+    // "save_background": false
+  },
